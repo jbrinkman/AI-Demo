@@ -1,0 +1,33 @@
+### Get all web resources
+GET http://localhost:5000/api/webresources
+
+### Get web resource by ID
+GET http://localhost:5000/api/webresources/1
+
+### Create a new web resource
+POST http://localhost:5000/api/webresources
+Content-Type: application/json
+
+{
+    "url": "https://www.example.com",
+    "title": "Example Website",
+    "category": "Example",
+    "author": "John Doe",
+    "publishDate": "2022-01-01T00:00:00Z"
+}
+
+### Update an existing web resource
+PUT http://localhost:5000/api/webresources/1
+Content-Type: application/json
+
+{
+    "id": 1,
+    "url": "https://www.example.com",
+    "title": "Example Website",
+    "category": "Example",
+    "author": "Jane Doe",
+    "publishDate": "2022-01-01T00:00:00Z"
+}
+
+### Delete a web resource by ID
+DELETE http://localhost:5000/api/webresources/1

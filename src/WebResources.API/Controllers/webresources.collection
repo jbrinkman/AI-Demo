@@ -1,0 +1,123 @@
+{
+    "info": {
+        "_postman_id": "d9d2e9d5-2f4f-4a7d-9d4f-7b3d3e4e9f7c",
+        "name": "Web Resources API",
+        "description": "A collection of requests to test the Web Resources API."
+    },
+    "item": [
+        {
+            "name": "Get all web resources",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{baseUrl}}/api/webresources",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "api",
+                        "webresources"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get web resource by ID",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{baseUrl}}/api/webresources/1",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "api",
+                        "webresources",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Create a new web resource",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"url\": \"https://www.example.com\",\n    \"title\": \"Example Website\",\n    \"category\": \"Example\",\n    \"author\": \"John Doe\",\n    \"publishDate\": \"2022-01-01T00:00:00Z\"\n}"
+                },
+                "url": {
+                    "raw": "{{baseUrl}}/api/webresources",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "api",
+                        "webresources"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Update an existing web resource",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"id\": 1,\n    \"url\": \"https://www.example.com\",\n    \"title\": \"Example Website\",\n    \"category\": \"Example\",\n    \"author\": \"Jane Doe\",\n    \"publishDate\": \"2022-01-01T00:00:00Z\"\n}"
+                },
+                "url": {
+                    "raw": "{{baseUrl}}/api/webresources/1",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "api",
+                        "webresources",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Delete a web resource by ID",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "{{baseUrl}}/api/webresources/1",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "api",
+                        "webresources",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ],
+    "protocolProfileBehavior": {}
+}
