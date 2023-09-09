@@ -9,11 +9,11 @@ namespace WebResources.Application.DTOs
     public class WebResourceDto
     {
         public int Id { get; set; }
-        public string Url { get; set; }
-        public string Title { get; set; }
-        public string Category { get; set; }
-        public string Author { get; set; }
-        public DateTimeOffset PublishDate { get; set; }
+        public string Url { get; set; } = string.Empty;
+        public string Title { get; set; } = string.Empty;
+        public string Category { get; set; } = string.Empty;
+        public string Author { get; set; } = string.Empty;
+        public DateTimeOffset PublishDate { get; set; } = DateTimeOffset.MinValue;
     }
 
 
