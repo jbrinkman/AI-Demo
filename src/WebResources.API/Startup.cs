@@ -3,6 +3,7 @@ using Serilog;
 using WebResources.Application.Interfaces;
 using WebResources.Infrastructure.Data;
 using WebResources.Infrastructure.Repositories;
+using WebResources.Infrastructure.Extensions;
 
 namespace WebResources.API
 {
@@ -19,8 +20,9 @@ namespace WebResources.API
         public void ConfigureServices(IServiceCollection services)
         {
             // Setup DbContext for EF Core
-            services.AddDbContext<WebResourceDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            // Refactor to move DB implementation details to Infrastructure project
+            services.AddWebResourceDb(Configuration.GetConnectionString("DefaultConnection"));
+
 
             // Register the repository for DI
             services.AddScoped<IWebResourceRepository, WebResourceRepository>();
