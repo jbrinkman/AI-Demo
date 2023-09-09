@@ -16,6 +16,10 @@ public class WebResourcesController : ControllerBase
         _repository = repository;
     }
 
+    /// <summary>
+    /// Retrieves all web resources.
+    /// </summary>
+    /// <returns>A list of web resources.</returns>
     [HttpGet]
     public async Task<IActionResult> GetAll()
     {
@@ -23,6 +27,11 @@ public class WebResourcesController : ControllerBase
         return Ok(resources);
     }
 
+    /// <summary>
+    /// Retrieves a web resource by ID.
+    /// </summary>
+    /// <param name="id">The ID of the web resource to retrieve.</param>
+    /// <returns>The web resource with the specified ID.</returns>
     [HttpGet("{id}")]
     public async Task<IActionResult> GetById(int id)
     {
@@ -34,6 +43,11 @@ public class WebResourcesController : ControllerBase
         return Ok(resource);
     }
 
+    /// <summary>
+    /// Creates a new web resource.
+    /// </summary>
+    /// <param name="webResourceDto">The web resource to create.</param>
+    /// <returns>The created web resource.</returns>
     [HttpPost]
     public async Task<IActionResult> Create(WebResourceDto webResource)
     {
@@ -52,6 +66,12 @@ public class WebResourcesController : ControllerBase
         return CreatedAtAction(nameof(GetById), new { id = webResource.Id }, webResource);
     }
 
+    /// <summary>
+    /// Updates an existing web resource.
+    /// </summary>
+    /// <param name="id">The ID of the web resource to update.</param>
+    /// <param name="webResourceDto">The updated web resource.</param>
+    /// <returns>The updated web resource.</returns>
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(int id, WebResourceDto webResource)
     {
@@ -70,6 +90,11 @@ public class WebResourcesController : ControllerBase
         return NoContent();
     }
 
+    /// <summary>
+    /// Deletes a web resource by ID.
+    /// </summary>
+    /// <param name="id">The ID of the web resource to delete.</param>
+    /// <returns>No content.</returns>
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(int id)
     {
