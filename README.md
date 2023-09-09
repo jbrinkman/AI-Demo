@@ -1,1 +1,6 @@
-# AI-Demo
+# AI Intern Demo
+This is a simple demo used for demonstrating GitHub Copilot Chat in VSCode. The code was originally generated using ChatGPT 4 with the following prompt:
+
+> I want you to act as a software developer.  Write an application with full working code for a .Net Core 7 web API, intended for managing web resources with a SQL Server database connection. Each web resource has the following fields: id, URL, title, category, author, and publish date. Field validations for the API should ensure that 'publishdate' is a valid DateTimeOffset and 'category' must be one of the following values: 'Web', '.Net', 'AI'. Full CRUD operations should be supported in accordance with the Clean Architecture pattern. Error handling should be implemented using Serilog, with errors being logged to a local file in a 'logs' folder that rotates daily. Assume that the reader possesses basic knowledge of .Net Core, web APIs, and CosmosDB. The focus should strictly be on development without incorporating security measures at this stage.
+
+The initial code from that ChatGPT prompt was then modified with additional prompts to create the final code.
